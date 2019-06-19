@@ -6,13 +6,20 @@
 //  Copyright © 2018 Amy Holt. All rights reserved.
 //
 
+
 import Foundation
+
 
 class Aviatrix {
     
+    var running : Bool
+    var author : String
+    
     func start() -> Bool {
-        return true
+        running = false
+        return running
     }
+    
     
     func refuel() {
         
@@ -28,5 +35,10 @@ class Aviatrix {
     
     func knownDestinations() -> [String] {
        return ["St. Louis"]
+    }
+    
+    init (authorName: String) {
+        author = authorName
+        running = false
     }
 }
